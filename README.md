@@ -1,6 +1,6 @@
 # Data Analyst + ML Agent
 
-[![CI](https://github.com/sarathdunna/AI-Agent/actions/workflows/ci.yml/badge.svg)](https://github.com/sarathdunna/AI-Agent/actions/workflows/ci.yml)
+[![CI](https://github.com/sarathdunna/data-analyst-ml-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/sarathdunna/data-analyst-ml-agent/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)
 ![React + TypeScript](https://img.shields.io/badge/frontend-React%20%2B%20TypeScript-61dafb)
@@ -13,6 +13,18 @@ FastAPI + Pandas/DuckDB/scikit-learn backend and a React + TypeScript +
 Tailwind frontend. An optional Anthropic Claude integration adds natural-
 language explanations on top of deterministic, code-computed results; every
 core feature works without any LLM key.
+
+## Screenshots
+
+**Dashboard**: upload a CSV/XLSX file and get an instant overview.
+
+![Dashboard](docs/screenshots/01-dashboard.png)
+
+| Data profiling | Visualizations |
+|---|---|
+| ![Data profile: column types, missing values, suggested targets](docs/screenshots/02-data-profile.png) | ![Scatter plot of tenure vs total charges](docs/screenshots/03-visualizations.png) |
+| **SQL agent** (read-only, DuckDB) | **ML Studio**: train, compare and explain |
+| ![SQL query: churn rate by contract type](docs/screenshots/04-sql-agent.png) | ![Random Forest metrics and feature importance](docs/screenshots/05-ml-studio.png) |
 
 ## Tech stack
 
@@ -33,8 +45,8 @@ core feature works without any LLM key.
 ### 1. Clone the project
 
 ```bash
-git clone https://github.com/sarathdunna/AI-Agent.git
-cd AI-Agent
+git clone https://github.com/sarathdunna/data-analyst-ml-agent.git
+cd data-analyst-ml-agent
 ```
 
 ### 2. Configure environment variables
