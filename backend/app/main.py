@@ -21,7 +21,8 @@ app = FastAPI(title="Data Analyst + ML Agent", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.FRONTEND_URL],
+    # Comma-separated list; trailing slashes ignored so "https://x.vercel.app/" still matches.
+    allow_origins=[o.strip().rstrip("/") for o in settings.FRONTEND_URL.split(",") if o.strip()],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
