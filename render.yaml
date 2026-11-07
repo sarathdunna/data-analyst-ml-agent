@@ -1,0 +1,22 @@
+# Render Blueprint for the FastAPI backend (Render dashboard: New -> Blueprint -> pick this repo).
+services:
+  - type: web
+    name: data-analyst-ml-agent-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      # numpy 1.26 / scipy 1.13 have no Python 3.13 wheels; pin 3.12 so the build doesn't compile from source.
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      # Your Vercel URL, e.g. https://data-analyst-ml-agent.vercel.app (comma-separate several).
+      - key: FRONTEND_URL
+        sync: false
+      - key: MAX_UPLOAD_MB
+        value: "10"
+      # Optional. Leave empty for a public demo: every visitor's question would spend your API credits.
+      - key: ANTHROPIC_API_KEY
+        sync: false
