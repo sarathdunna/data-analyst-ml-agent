@@ -5,6 +5,11 @@
 ![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)
 ![React + TypeScript](https://img.shields.io/badge/frontend-React%20%2B%20TypeScript-61dafb)
 
+**🚀 Live demo: [data-analyst-ml-agent.onrender.com](https://data-analyst-ml-agent.onrender.com)**: click
+**Try Sample Dataset** on the dashboard to explore it without uploading anything.
+Hosted on Render's free plan: the API sleeps when idle, so the first request can take
+about a minute, and uploaded data resets when the server restarts.
+
 A full-stack M.Tech major project: an AI-assisted data analysis and machine
 learning platform. Upload a dataset, profile and clean it, explore it (EDA,
 charts, natural-language Q&A, SQL), train and compare ML models, get
